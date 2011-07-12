@@ -11,12 +11,17 @@
 
 @implementation KSHomeViewController
 
-@synthesize typrViewController,optionsViewController,statsViewController,leaderboardViewController,howtoViewController, playButton, howToPlayButton, leaderboardButton, optionsButton, statsButton;
+@synthesize levelerViewController,optionsViewController,statsViewController,leaderboardViewController,howtoViewController, playButton, howToPlayButton, leaderboardButton, optionsButton, statsButton;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        self = [super initWithNibName:@"KSHomeViewController-iPad" bundle:nibBundleOrNil];
+    } else {
+        self = [super initWithNibName:@"KSHomeViewController" bundle:nibBundleOrNil];
+    }
+
     if (self) {
         // Custom initialization
     }
@@ -25,7 +30,7 @@
 
 - (void)dealloc
 {
-    self.typrViewController=nil;
+    self.levelerViewController=nil;
     self.howtoViewController=nil;
     [super dealloc];
 }
@@ -70,7 +75,7 @@
    //
 
     if(sender == playButton){
-        [self.navigationController pushViewController:typrViewController animated:YES];
+        [self.navigationController pushViewController:levelerViewController animated:YES];
     }
     if(sender == howToPlayButton){
         [self.navigationController pushViewController:howtoViewController animated:YES];

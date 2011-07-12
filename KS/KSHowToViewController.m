@@ -15,7 +15,12 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        self = [super initWithNibName:@"KSHowToViewController-iPad" bundle:nibBundleOrNil];
+    } else {
+        self = [super initWithNibName:@"KSHowToViewController" bundle:nibBundleOrNil];
+    }
+
     if (self) {
         // Custom initialization
     }

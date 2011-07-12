@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TyprViewController.h"
+#import "LevelerViewController.h"
 #import "KSHowToViewController.h"
 #import "KSOptionsViewController.h"
 #import "KSLeaderboardViewController.h"
@@ -20,7 +20,7 @@
     IBOutlet UIButton *optionsButton;
     IBOutlet UIButton *statsButton;
     
-    TyprViewController *typrViewController;
+    LevelerViewController *levelerViewController;
     KSHowToViewController  *howtoViewController;
     KSOptionsViewController *optionsViewController;
     KSStatsViewController  *statsViewController;
@@ -34,7 +34,7 @@
 @property (nonatomic, retain) IBOutlet UIButton *optionsButton;
 @property (nonatomic, retain) IBOutlet UIButton *statsButton;
 
-@property (nonatomic, retain) IBOutlet TyprViewController *typrViewController;
+@property (nonatomic, retain) IBOutlet LevelerViewController *levelerViewController;
 @property (nonatomic, retain) IBOutlet KSHowToViewController *howtoViewController;
 @property (nonatomic, retain) IBOutlet KSOptionsViewController *optionsViewController;
 @property (nonatomic, retain) IBOutlet KSStatsViewController *statsViewController;
